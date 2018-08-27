@@ -35,6 +35,6 @@ class UsersController extends Controller
             return $this->redirectToRoute("security_login");
         }
 
-        return $this->render('default/register.html.twig');
+        return $this->render('users/register.html.twig');
     }
 }

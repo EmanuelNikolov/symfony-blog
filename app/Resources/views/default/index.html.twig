@@ -1,17 +1,5 @@
 {% extends 'base.html.twig' %}
 
 {% block body %}
-    <h1>Create an article</h1>
-    <form method="post">
-        <label>
-            Title:
-            <input type="text" name="article[title]">
-        </label><br>
-        <label>
-            Body:
-            <textarea name="article[body]"></textarea>
-        </label><br>
-        <input type="submit" value="Submit">
-    </form>
-    <a href="{{ path('list_articles') }}">List Articles</a>
+    <h1>Welcome to the Symfony Blog!</h1>
 {% endblock %}

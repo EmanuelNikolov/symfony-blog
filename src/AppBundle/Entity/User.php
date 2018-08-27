@@ -55,7 +55,6 @@ class User implements UserInterface
     /**
      * User constructor.
      *
-     * @param ArrayCollection $articles
      */
     public function __construct()
     {

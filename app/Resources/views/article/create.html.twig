@@ -1,0 +1,31 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <div class="row align-items-center justify-content-center flex-fill">
+        <form action="{{ path('create_article') }}" method="POST">
+            <fieldset>
+                <legend>New Article</legend>
+
+                <div class="form-group">
+                    <label class="sr-only" for="article_title">Post Title</label>
+                    <input type="text" class="form-control" id="article_title" placeholder="Title"
+                           name="article[title]">
+                </div>
+
+                <div class="form-group">
+                    <label class="sr-only" for="article_body">Content</label>
+                    <textarea class="form-control" rows="6" id="article_body"
+                              name="article[body]" placeholder="Content"></textarea>
+                </div>
+
+                {{ form_row(form._token) }}
+
+                <div class="form-group float-right">
+                    <a class="btn btn-default" href="{{ path('home_page') }}">Cancel</a>
+                    <button type="submit" class="btn btn-primary">Submit Article</button>
+                </div>
+            </fieldset>
+        </form>
+    </div>
+{% endblock %}
+
